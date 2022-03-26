@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "test-module": "Login",
+      "test-name": "Login",
+      "test-date": "2022-03-24",
+      "test-time": "21-51-02-40",
+      "test-status": true
+    },
+    {
+      "test-module": "Login",
+      "test-name": "Login",
+      "test-date": "2022-03-24",
+      "test-time": "21-51-08-31",
+      "test-status": true
+    },
+    {
+      "test-module": null,
+      "test-name": null,
+      "test-date": null,
+      "test-time": null,
+      "test-status": false
+    }
+  ],
+  "test-start-time": "2022-03-24 21-51-01-88",
+  "test-end-time": "2022-03-24 21-51-12-96",
+  "test-executed-by": "Aynigar"
+}

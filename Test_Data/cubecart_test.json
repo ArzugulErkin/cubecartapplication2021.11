@@ -1,0 +1,15 @@
+{
+  "loginuser": {
+    "name": "testautomation1",
+    "password": "automation123!"},
+  "customer": {
+    "customer-firstname": "test-firstname",
+    "customer-lastname": "test-lastname",
+    "customer-email": "test1234@test.com"},
+  "product": {
+    "product-name": "iphone1234",
+    "product-code": "iphone1234",
+    "manufacturer": "Kia",
+    "category": "cat_35"
+  }
+}

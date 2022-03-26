@@ -1,0 +1,1 @@
+Denominator cant be zero / by zero

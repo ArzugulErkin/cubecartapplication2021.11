@@ -1,0 +1,33 @@
+{
+  "courses": {
+    "WebAutomation": [
+      {
+        "course title": "Selenium-Webdriver-Java",
+        "price": 50
+      },
+      {
+        "course title": "Cypress",
+        "price": 50
+      },
+      {
+        "course title": "BDD-Cucumber-Java",
+        "price": 50
+      }
+    ],
+    "Api": [
+      {
+        "course title": "RestAssures-api_Testing",
+        "price": 100
+      },
+      {
+        "course title": "Sout-UI-Webservices_Testing",
+        "price": 100
+      }
+    ]
+  },
+  "Instructor": "Dolkun Tarim",
+  "url": "https://seleniummaster.teachable.com/",
+  "linkedIn": "https://www.linkedIn.com",
+  "services": "SDET training",
+  "expertise": "Automation"
+}
