@@ -8,14 +8,15 @@ public class JunitDemo1 {
     public static void setup(){
         System.out.println("Before class only runs once");
     }
+
     @Before
     public void beforeEvryTest(){
         System.out.println("run before evry test");
     }
     @Test
     public void test1(){
-        System.out.println("square root test");
-    }
+        System.out.println("square root test");}
+
     @Test
     public void test2(){
         System.out.println("compare two string");
@@ -24,6 +25,13 @@ public class JunitDemo1 {
     public void test3(){
         System.out.println("compare two numbers");
     }
+
+    @Test
+    public void ctest3(){
+        System.out.println("Compare Two Numbers Test");
+        Assert.assertEquals(100,100);
+    }
+
     @After
     public void end(){
         System.out.println("");
