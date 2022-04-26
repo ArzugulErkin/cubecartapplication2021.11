@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+        <suite thread-count="2" parallel="tests" name="CubeCart Test Suite">
+    <test name="Chrome Test" verbose="1">
+        <parameter name="browsername" value="chrome"></parameter>
+    <classes>
+    <class name="test.testngframework.MultiBrowserTest"></class>
+</classes>
+</test>
+
+
+    <test name="Fire Fox Test" verbose="1">
+    <parameter name="browsername" value="fire fox"></parameter>
+    <classes>
+        <class name="test.testngframework.MultiBrowserTest"></class>
+</classes>
+</test>
+
+</suite>

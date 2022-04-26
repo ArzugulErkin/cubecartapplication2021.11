@@ -4,6 +4,7 @@ import com.unitedcoder.cubecartautomation.TestBase;
 import org.junit.*;
 
 public class Runner extends TestBase {
+
     static LoginPage loginPage;
     static DashboardPage dashboardPage;
     ProductsPage productsPage;
@@ -55,3 +56,5 @@ public class Runner extends TestBase {
         driver.quit();
     }
 }
+
+

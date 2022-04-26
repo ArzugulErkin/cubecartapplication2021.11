@@ -2,9 +2,14 @@ package com.unitedcoder.cubecartautomation;
 
 import com.unitedcoder.classconcepts.LoginUser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends TestBase {
+
+    public LoginPage(WebDriver driver) {
+
+    }
 
     public void logIn(LoginUser loginUser){
         WebElement userNameField=driver.findElement(By.id("username"));

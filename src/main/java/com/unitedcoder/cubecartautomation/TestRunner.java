@@ -5,7 +5,7 @@ import com.unitedcoder.classconcepts.LoginUser;
 public class TestRunner extends TestBase {
     public static void main(String[] args) {
         browserSetUp();
-        LoginPage loginPage=new LoginPage();
+        LoginPage loginPage=new LoginPage(driver);
         LoginUser loginUser=new LoginUser("testautomation1","automation123!");
         loginPage.logIn(loginUser);
         DashboardPage dashboardPage=new DashboardPage();

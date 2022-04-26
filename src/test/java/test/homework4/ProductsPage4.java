@@ -1,13 +1,13 @@
-package test.pageobjectmodel;
+package test.homework4;
 
 import com.unitedcoder.exceldemo.ExcelUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import test.pageobjectmodel.TestUtility;
 
-public class ProductsPage {
+public class ProductsPage4 {
 
     WebDriver driver;
     TestUtility testUtility;//null
@@ -42,7 +42,7 @@ public class ProductsPage {
 
     String productName=null;
 
-    public ProductsPage(WebDriver driver) {
+    public ProductsPage4(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         excelUtility=new ExcelUtility();
@@ -51,13 +51,15 @@ public class ProductsPage {
     }
 
 
-    public void addProduct(){
-        productName=excelUtility.readFromExcelCell(excelFile,"Product_Info",1,0);
-        String productCode=excelUtility.readFromExcelCell(excelFile,"Product_Info",1,1);
-        String productWeight=excelUtility.readFromExcelCell(excelFile,"Product_Info",1,2);
-        String stockLevel=excelUtility.readFromExcelCell(excelFile,"Product_Info",1,3);
+    public void addMultipleProduct(){
+        for(int i=0;i<4;i++){
+        productName=excelUtility.readFromExcelCell(excelFile,"Product_Info2",i,0);
+        String productCode=excelUtility.readFromExcelCell(excelFile,"Product_Info2",i,1);
+        String productWeight=excelUtility.readFromExcelCell(excelFile,"Product_Info2",i,2);
+        String stockLevel=excelUtility.readFromExcelCell(excelFile,"Product_Info2",i,3);
 
         testUtility.waitForElementPresent(addProductLink);
+
         addProductLink.click();
         testUtility.waitForElementPresent(productNameField);
         productNameField.sendKeys(productName);
@@ -69,6 +71,7 @@ public class ProductsPage {
         stockLevelField.sendKeys(stockLevel);
         testUtility.waitForElementPresent(saveButton);
         saveButton.click();
+    }
     }
     public void addProduct(String productName,String productCode){
         testUtility.waitForElementPresent(addProductLink);
@@ -91,4 +94,9 @@ public class ProductsPage {
         testUtility.waitForElementPresent(successfullMessage);
         return successfullMessage.isDisplayed();
     }
+
+    public void deleteProduct(){
+
+    }
 }
+

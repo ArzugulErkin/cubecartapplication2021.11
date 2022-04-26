@@ -1,4 +1,4 @@
-package test.pageobjectmodel;
+package test.homework4;
 import com.github.javafaker.Faker;
 import com.unitedcoder.configutility.ApplicationConfig;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestUtility {
+public class TestUtility4 {
     private int timeout=Integer.parseInt(ApplicationConfig.readFromConfigProperties(
             "config-qa.properties","timeout"
     ));
@@ -15,7 +15,7 @@ public class TestUtility {
 
     Faker faker=new Faker();
 
-    public TestUtility(WebDriver driver) {
+    public TestUtility4(WebDriver driver) {
         this.driver = driver;
     }
 

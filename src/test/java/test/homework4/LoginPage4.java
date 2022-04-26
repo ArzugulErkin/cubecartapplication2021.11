@@ -1,12 +1,13 @@
-package test.pageobjectmodel;
+package test.homework4;
 
 import com.unitedcoder.configutility.ApplicationConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import test.pageobjectmodel.TestUtility;
 
-public class LoginPage {
+public class LoginPage4 {
 
     WebDriver driver;
     String configFile="config-prod.properties";
@@ -21,7 +22,7 @@ public class LoginPage {
     @FindBy(id="login")
     WebElement loginBUtton;
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage4(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         testUtility=new TestUtility(driver);
