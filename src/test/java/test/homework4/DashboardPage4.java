@@ -1,10 +1,11 @@
-package test.pageobjectmodel;
+package test.homework4;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import test.pageobjectmodel.TestUtility;
 
-public class DashboardPage {
+public class DashboardPage4 {
     WebDriver driver;
     TestUtility testUtility;
 
@@ -20,7 +21,7 @@ public class DashboardPage {
     @FindBy(css="i.fa.fa-sign-out")
     WebElement logoutLink;
 
-    public DashboardPage(WebDriver driver) {
+    public DashboardPage4(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         testUtility=new TestUtility(driver);

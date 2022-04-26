@@ -8,85 +8,99 @@
     <artifactId>CubeCartApplication2021</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-   <dependencies>
-       <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-       <dependency>
-           <groupId>org.apache.commons</groupId>
-           <artifactId>commons-lang3</artifactId>
-           <version>3.9</version>
-       </dependency>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-       <dependency>
-           <groupId>org.seleniumhq.selenium</groupId>
-           <artifactId>selenium-java</artifactId>
-           <version>3.141.59</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
-       <dependency>
-           <groupId>joda-time</groupId>
-           <artifactId>joda-time</artifactId>
-           <version>2.10.13</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.13</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-       <dependency>
-           <groupId>commons-io</groupId>
-           <artifactId>commons-io</artifactId>
-           <version>2.8.0</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.8.0</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
-       <dependency>
-           <groupId>org.apache.commons</groupId>
-           <artifactId>commons-csv</artifactId>
-           <version>1.8</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.8</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-       <dependency>
-           <groupId>org.apache.poi</groupId>
-           <artifactId>poi-ooxml</artifactId>
-           <version>4.1.2</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-       <dependency>
-           <groupId>com.fasterxml.jackson.dataformat</groupId>
-           <artifactId>jackson-dataformat-xml</artifactId>
-           <version>2.13.1</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.13.1</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
-       <dependency>
-           <groupId>io.rest-assured</groupId>
-           <artifactId>json-path</artifactId>
-           <version>4.3.1</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>4.3.1</version>
+        </dependency>
 
-       <!-- https://mvnrepository.com/artifact/junit/junit -->
-       <dependency>
-           <groupId>junit</groupId>
-           <artifactId>junit</artifactId>
-           <version>4.4</version>
-           <scope>test</scope>
-       </dependency>
-
-
-       <dependency>
-           <groupId>com.github.javafaker</groupId>
-           <artifactId>javafaker</artifactId>
-           <version>0.12</version>
-       </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.4</version>
+            <scope>test</scope>
+        </dependency>
 
 
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>0.12</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>3.0.0-M5</version>
+        </dependency>
 
 
 
 
 
-   </dependencies>
+
+    </dependencies>
 
     <build>
         <pluginManagement>
@@ -123,6 +137,22 @@
                         </execution>
                     </executions>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${suiteXMLFile}</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+
+
+
+
+
             </plugins>
         </pluginManagement>
     </build>

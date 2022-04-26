@@ -11,7 +11,7 @@ public class CubeCartAddMultipleProducTest extends TestBase{
         String userName=excelUtility.readFromExcelCell(fileName,"Login-Info",1,0);
         String password=excelUtility.readFromExcelCell(fileName,"Login-Info",1,1);
         browserSetUp();
-        LoginPage loginPage=new LoginPage();
+        LoginPage loginPage=new LoginPage(driver);
         loginPage.logIn(userName,password);
         ProductsPage productsPage=new ProductsPage();
         productsPage.addMultipleProduct(fileName,"Product_Info");
