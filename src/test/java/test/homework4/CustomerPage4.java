@@ -36,8 +36,14 @@ public class CustomerPage4 {
     )
     List<WebElement> customersList;
 
-    @FindBy(xpath = "//*[@id=\"customer-list\"]/table")
-    WebElement customerListTable;
+
+    @FindBy(id="tab_customer-groups")
+      WebElement CustomerGrupsLink;
+    @FindBy(css = "Input[name=\"save\"]")
+            WebElement CustomerGroupsSaveButton;
+    @FindBy(xpath = "//div[text()='Customer group added.']")
+   WebElement CustomerGroupAdded;
+
 
     String customerName=null;
 
@@ -78,9 +84,9 @@ public class CustomerPage4 {
         return successMessageForDelete.isDisplayed();
     }
 
-    public boolean viewCustomers(){
-        testUtility.waitForElementPresent(customerListTable);
-        return customersList.size()>1;
+   // public boolean viewCustomers(){
+      //  testUtility.waitForElementPresent(customerListTable);
+      //  return customersList.size()>1;
 
-    }
+    //}
 }

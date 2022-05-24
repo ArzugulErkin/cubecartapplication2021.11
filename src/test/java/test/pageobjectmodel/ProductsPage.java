@@ -39,6 +39,8 @@ public class ProductsPage {
 
     @FindBy(css="div.success")
     WebElement successfullMessage;
+    @FindBy(xpath = "(//*[@type='submit' and @value='Go'])[1]")
+            WebElement goButton;
 
     String productName=null;
 
