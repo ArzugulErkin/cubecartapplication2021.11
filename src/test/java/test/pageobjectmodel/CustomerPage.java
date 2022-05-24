@@ -59,9 +59,26 @@ public class CustomerPage {
         testUtility.waitForElementPresent(saveButton);
         saveButton.click();
     }
+    public void addCustomer(String firstName,String lastName,String email){
+        testUtility.waitForElementPresent(addCustomerLink);
+        addCustomerLink.click();
+        testUtility.waitForElementPresent(customerFirstNameField);
+        customerFirstNameField.sendKeys(firstName);
+        testUtility.waitForElementPresent(customerLastNameField);
+        customerLastNameField.sendKeys(lastName);
+        testUtility.waitForElementPresent(customerEmailField);
+        customerEmailField.sendKeys(email);
+        testUtility.waitForElementPresent(saveButton);
+        saveButton.click();
+    }
 
     public boolean verifyCustomerAddedSuccessfully(){
         return driver.getPageSource().contains(customerName);
+    }
+
+    public boolean verifyCustomerAddedSuccessfully(String customerEmail){
+        testUtility.sleep(3);
+        return driver.getPageSource().contains(customerEmail);
     }
 
     public void deleteCustomer(){
