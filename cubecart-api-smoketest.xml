@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CubeCart Test Suite" parallel="methods" thread-count="5">
+
+        <listeners>
+            <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+        </listeners>
+    <test verbose="1" name="CubeCart Api Test">
+        <classes>
+            <class name="test.cubecartrestassuredapi.CubeCartApiTest"></class>
+            <class name="test.httpapitest.ApiTestRunner"></class>
+        </classes>
+    </test>
+
+</suite>
