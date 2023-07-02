@@ -33,5 +33,6 @@ public class ATMLoopDemo {
                 System.out.println(String.format("This is %d times you are trying, you only can try %d time",i,chance-i));
             }
         }while (i<chance);
+
     }
 }
